@@ -5423,9 +5423,15 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
+    var _this = this;
+
     console.log('created');
     console.log(this.bookable1);
     console.log(this.bookable2);
+    setTimeout(function () {
+      _this.bookable1.title = 'Not Cheap';
+      _this.bookable2.title = 'Not Cheap 2';
+    }, 5000);
   }
 });
 
