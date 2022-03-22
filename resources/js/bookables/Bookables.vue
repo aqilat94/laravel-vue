@@ -28,7 +28,14 @@ export default {
         console.log('created');
         console.log(this.bookable1);
         console.log(this.bookable2);
-    }
+
+        setTimeout(() => {
+            this.bookable1.title = 'Not Cheap'
+            this.bookable2.title = 'Not Cheap 2'
+        },5000);
+    },
+
+    
 
 }
 </script>
