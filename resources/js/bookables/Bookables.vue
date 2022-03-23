@@ -1,7 +1,6 @@
 <template>
     <div>
-        <bookable-list-item :item-title="bookable1.title" :item-content="bookable1.content" :price="1000"></bookable-list-item>
-        <bookable-list-item :item-title="bookable2.title" :item-content="bookable2.content" :price="2000"></bookable-list-item>
+        <bookable-list-item :item-title="bookable.title" :item-content="bookable.content" :price="1000" v-for="(bookable, index) in bookables" :key="index"></bookable-list-item>
     </div>
 </template>
 
@@ -14,25 +13,22 @@ export default {
     },
     data() {
         return {
-            bookable1: {
-                title: 'Cheap Villa !!!',
-                content: 'Very Cheap Villa'
-            },
-            bookable2: {
-                title: 'Cheap Villa 2',
-                content: 'Very Cheap Villa 2'
-            },
+            bookables: null
         }
     },
     created() {
-        console.log('created');
-        console.log(this.bookable1);
-        console.log(this.bookable2);
-
         setTimeout(() => {
-            this.bookable1.title = 'Not Cheap'
-            this.bookable2.title = 'Not Cheap 2'
-        },5000);
+            this.bookables = [
+                {
+                    title: 'Cheap Villa',
+                    content: 'A very cheap Villa'
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                }
+            ]
+        }, 2000);
     },
 
     
