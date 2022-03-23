@@ -5415,6 +5415,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -5423,8 +5424,14 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       bookables: null,
-      loading: false
+      loading: false,
+      columns: 3
     };
+  },
+  computed: {
+    rows: function rows() {
+      return this.bookables == null ? 0 : Math.ceil(this.bookables.length / this.columns);
+    }
   },
   created: function created() {
     var _this = this;
@@ -28527,6 +28534,8 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c("div", [_vm._v("Rows = " + _vm._s(_vm.rows))]),
+    _vm._v(" "),
     _vm.loading
       ? _c("div", [_vm._v("Data is loading...")])
       : _c(

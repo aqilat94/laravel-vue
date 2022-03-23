@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>Rows = {{ rows }}</div>
         <div v-if="loading">Data is loading...</div>
         <div v-else>
             <bookable-list-item 
@@ -23,7 +24,13 @@ export default {
     data() {
         return {
             bookables: null,
-            loading: false
+            loading: false,
+            columns: 3,
+        }
+    },
+    computed: {
+        rows() {
+            return this.bookables == null ? 0 : Math.ceil(this.bookables.length / this.columns);
         }
     },
     created() {
