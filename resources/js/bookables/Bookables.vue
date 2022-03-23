@@ -37,7 +37,27 @@ export default {
                 {
                     title: 'Cheap Villa 2',
                     content: 'A very cheap Villa 2'
-                }
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                },
+                {
+                    title: 'Cheap Villa 2',
+                    content: 'A very cheap Villa 2'
+                },
             ]
             this.loading = false
         }, 2000);
